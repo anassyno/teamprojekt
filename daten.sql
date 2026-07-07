@@ -1,15 +1,5 @@
 USE e_commerce;
- 
- 
--- Alte Daten löschen
-
-DELETE FROM bestellung;
-DELETE FROM produkt;
-DELETE FROM kunde;
-DELETE FROM lieferant;
-DELETE FROM kategorie;
- 
- 
+  
 -- Kategorien
 
 INSERT INTO kategorie VALUES
