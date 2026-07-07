@@ -8,11 +8,11 @@ join kategorie ka on ka.ka_id = p.ka_id
 join lieferant l on l.li_id = p.li_id
 
 
-select p.bezeichnung Produkt, sum(b.pr_id) 'Verkauft gesamt'
+select p.bezeichnung Produkt, sum(b.menge) 'Verkauft gesamt'
 from bestellung b
 join produkt p on p.pr_id = b.pr_id
 group by p.bezeichnung
-order by sum(b.pr_id) desc;
+order by sum(b.menge) desc;
 
 select l.bezeichnung Lieferant, p.bezeichnung Produkt
 from lieferant l
