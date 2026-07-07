@@ -10,13 +10,6 @@ DELETE FROM lieferant;
 DELETE FROM kategorie;
  
  
--- Identity zurücksetzen
-
-DBCC CHECKIDENT ('lieferant', RESEED, 0);
-DBCC CHECKIDENT ('kunde', RESEED, 0);
-DBCC CHECKIDENT ('produkt', RESEED, 0);
- 
- 
 -- Kategorien
 
 INSERT INTO kategorie VALUES
@@ -37,9 +30,7 @@ INSERT INTO lieferant VALUES
 ('FashionTrade GmbH', 'Marktplatz 7', '90411', 'Nuernberg'),
 ('SportMax GmbH', 'Sportallee 12', '90762', 'Fuerth'),
 ('FoodLine GmbH', 'Industriestrasse 18', '91052', 'Erlangen');
- 
-SET IDENTITY_INSERT lieferant OFF;
- 
+  
  
 -- Kunden
  
@@ -53,7 +44,6 @@ INSERT INTO kunde VALUES
 ('Jonas', 'Hoffmann', 'Bergstrasse 3', '91052', 'Erlangen'),
 ('Sofia', 'Klein', 'Lindenweg 6', '90431', 'Nuernberg');
   
- 
 -- Produkte
 
 INSERT INTO produkt VALUES
