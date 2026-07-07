@@ -1,10 +1,10 @@
 USE e_commerce;
 
---DROP TABLE IF EXISTS kategorie;
---DROP TABLE IF EXISTS lieferant
---DROP TABLE IF EXISTS kunde;
---DROP TABLE IF EXISTS produkt;
---DROP TABLE IF EXISTS bestellung; 
+DROP TABLE IF EXISTS bestellung; 
+DROP TABLE IF EXISTS produkt;
+DROP TABLE IF EXISTS kunde;
+DROP TABLE IF EXISTS lieferant
+DROP TABLE IF EXISTS kategorie;
 
 CREATE TABLE kategorie (
 ka_id CHAR(2),
@@ -27,7 +27,7 @@ vorname VARCHAR(30),
 nachname VARCHAR(30),
 adresse VARCHAR(50),
 plz CHAR(5) check (LEN(plz) = 5),
-ort VARCHAR(50)
+ort VARCHAR(50),
 CONSTRAINT pk_ku PRIMARY KEY (ku_id)
 );
 
