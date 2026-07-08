@@ -37,21 +37,21 @@ INSERT INTO kunde VALUES
 -- Produkte
 
 INSERT INTO produkt VALUES
-('Laptop', 'EL', 1),
-('Monitor', 'EL', 1),
-('Tastatur', 'BU', 2),
-('Maus', 'BU', 2),
-('Druckerpapier', 'BU', 2),
-('Staubsauger', 'HA', 3),
-('Kaffeemaschine', 'HA', 3),
-('T-Shirt', 'KL', 4),
-('Jacke', 'KL', 4),
-('Sneaker', 'SP', 5),
-('Fussball', 'SP', 5),
-('Fitnessmatte', 'SP', 5),
-('Kaffee', 'LE', 6),
-('Tee', 'LE', 6),
-('Schokolade', 'LE', 6);
+('Laptop', 'EL', 1, 690.00),
+('Monitor', 'EL', 1, 150.00),
+('Tastatur', 'BU', 2, 35.00),
+('Maus', 'BU', 2, 32.50),
+('Druckerpapier', 'BU', 2, 7.99),
+('Staubsauger', 'HA', 3, 259.90),
+('Kaffeemaschine', 'HA', 3, 439.90),
+('T-Shirt', 'KL', 4, 29.90),
+('Jacke', 'KL', 4, 68.90),
+('Sneaker', 'SP', 5, 74.90),
+('Fussball', 'SP', 5, 49.50),
+('Fitnessmatte', 'SP', 5, 24.0),
+('Kaffee', 'LE', 6, 12.90),
+('Tee', 'LE', 6, 3.90),
+('Schokolade', 'LE', 6, 1.29);
   
  
 -- Bestellungen

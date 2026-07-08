@@ -3,7 +3,7 @@ USE e_commerce;
 DROP TABLE IF EXISTS bestellung; 
 DROP TABLE IF EXISTS produkt;
 DROP TABLE IF EXISTS kunde;
-DROP TABLE IF EXISTS lieferant
+DROP TABLE IF EXISTS lieferant;
 DROP TABLE IF EXISTS kategorie;
 
 CREATE TABLE kategorie (
@@ -36,6 +36,7 @@ pr_id INT IDENTITY(1, 1),
 bezeichnung VARCHAR(30),
 ka_id CHAR(2),
 li_id INT,
+preis DECIMAL(8,2),
 CONSTRAINT fk_pr_ka FOREIGN KEY (ka_id) REFERENCES kategorie(ka_id),
 CONSTRAINT fk_pr_li FOREIGN KEY (li_id) REFERENCES lieferant(li_id),
 CONSTRAINT pk_pr PRIMARY KEY (pr_id)
