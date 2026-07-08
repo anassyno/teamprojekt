@@ -45,7 +45,8 @@ ORDER BY SUM(gesamtpreis) DESC;
 
 
 --Top 3 Kunden
-SELECT TOP 3 WITH TIES k.ku_id ID, k.vorname Vorname, k.nachname Nachname, SUM(b.gesamtpreis) Umsatz
+SELECT TOP 3 WITH TIES k.ku_id ID, k.vorname Vorname, 
+k.nachname Nachname, SUM(b.gesamtpreis) Umsatz
 FROM bestellung b
 JOIN kunde k on k.ku_id = b.ku_id
 GROUP BY k.ku_id, k.vorname, k.nachname
@@ -66,7 +67,6 @@ WHERE k.ku_id NOT IN
 	SELECT b.ku_id
 	FROM bestellung b
 	);
-
 
 --Lieferanten nach beschäftigung sortiert
 SELECT l.bezeichnung Lieferant, COUNT(*) 'Bestellungen geliefert'
