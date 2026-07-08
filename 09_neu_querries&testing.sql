@@ -69,7 +69,7 @@ WHERE k.ku_id NOT IN
 
 
 --Lieferanten nach beschäftigung sortiert
-SELECT l.bezeichnung, COUNT(*) 'Bestellungen geliefert'
+SELECT l.bezeichnung Lieferant, COUNT(*) 'Bestellungen geliefert'
 FROM bestellung b
 JOIN produkt p on p.pr_id = b.pr_id
 JOIN lieferant l on l.li_id = p.li_id
@@ -77,7 +77,7 @@ GROUP BY l.bezeichnung
 ORDER BY COUNT(*) DESC;
 
 --Lieferanten nach Umsatz sortiert
-SELECT l.bezeichnung, SUM(gesamtpreis) Umsatz
+SELECT l.bezeichnung Lieferant, SUM(gesamtpreis) Umsatz
 FROM bestellung b
 JOIN produkt p on p.pr_id = b.pr_id
 JOIN lieferant l on l.li_id = p.li_id
